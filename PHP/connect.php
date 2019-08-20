@@ -2,7 +2,7 @@
 //Database details
 $db_host = 'localhost';
 $db_username = 'admin';
-$db_password = 'JPAlETM8TEUo';
+$db_password = 'SQL6Qf9qCjp4';
 $db_name = 'Notes';
 
 //Create connection and select DB
