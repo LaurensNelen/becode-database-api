@@ -1,9 +1,10 @@
 <?php
 //Database details
+
 $db_host = 'localhost';
 $db_username = 'admin';
-$db_password = 'SQL6Qf9qCjp4';
-$db_name = 'Notes';
+$db_password = '3ZTZWyckkFv3';
+$db_name = 'notes';
 
 //Create connection and select DB
 $conn = mysqli_connect($db_host, $db_username, $db_password, $db_name);

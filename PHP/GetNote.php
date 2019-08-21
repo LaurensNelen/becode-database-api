@@ -1,6 +1,6 @@
 
 <?php
-header ("Access-Control-Allow-Origin: *"); 
+header ("Access-Control-Allow-Origin: http://localhost:3000"); 
 require_once('connect.php');
 $title = filter_var($_GET["title"]);
 
