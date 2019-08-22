@@ -1,6 +1,6 @@
 <?php
 require_once('connect.php');
-$title = filter_var($_GET["title"]);
+$title = filter_var($_POST["title"]);
 
 $note = filter_var($_POST["note"]);
 if (isset($note)&& isset($title)) {

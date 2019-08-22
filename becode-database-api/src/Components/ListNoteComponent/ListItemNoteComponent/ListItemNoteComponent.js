@@ -24,9 +24,7 @@ export default function ListItemNoteComponent(props) {
             
         }
     }
-    const inputStyle={
-        display: showdiv ? "flex" :"none"
-    }
+ 
     function Edit(event)
     {
         event.preventDefault();
@@ -51,7 +49,7 @@ function update()
       .catch(function (error) {
         console.log(error);
       });
-
+      window.location.reload();
       
 
 }
@@ -65,17 +63,24 @@ function update()
 
   }
 
+   const inputStyle={
+    display: showdiv ? "flex" :"none",
+}
+
     return (
-        <div>
+        <div >
            <p>{props.note} </p>
-            <form>
-           <input type="submit" value="Delete Da Shizzle" onClick={Delete}/>
-           <input type="submit" value="Edit Da Shizzle" onClick={Edit}/>
+            <form >
+            <Button variant="primary"
+            type='submit' onClick={Delete}>
+     Delete </Button>    <Button variant="primary"
+            type='submit' onClick={Edit}>
+     Edit </Button>
            <div style={inputStyle}>
            <input type='text' name='newtitle' onChange={checkinput}/>
            {/* <input type='submit'onClick={update}></input> */}
            <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+       Edit it
       </Button>
 
       <Modal show={show} onHide={handleClose}>
@@ -87,10 +92,10 @@ function update()
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <form>
-          <input variant="primary"
-            value="save changes"type='submit' onClick={update}/>
-            </form>
+        
+          <Button variant="primary"
+            type='submit' onClick={update}>
+     Save changes </Button>
         </Modal.Footer>
       </Modal>
            </div>

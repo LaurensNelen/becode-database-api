@@ -18,11 +18,12 @@ console.log(result)
         fetchData();
       },[]);
 
-   
+ 
       const uuidv1 = require('uuid/v1');
       const listitem =showNote.map((note)=>(<ListItemNoteComponent key={uuidv1()} note={note}/>));
     return (
         <div>
+          <h2>List of Notes</h2>
       {listitem}
         </div>
     )
