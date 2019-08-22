@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Button } from 'react-bootstrap';
-export default function NoteComponent() {
+export default function SearchNoteComponent() {
   
   const [showdiv,setshow] = useState(null);
   const [showNote,SetNote]=useState([]);
@@ -35,9 +35,7 @@ export default function NoteComponent() {
         <div>
           <h2>Search note</h2>
             <form>
-                <label></label>
                 <input 
-             
                 type="text"
                 name="Title"
                 placeholder="Search note"
@@ -47,7 +45,7 @@ export default function NoteComponent() {
                   <Button 
                   variant="primary"
                   type='submit' onClick={Click}>
-                    Save changes 
+                    Search Title
                   </Button>
             </form>
             <div style={DivNoteStyle}>

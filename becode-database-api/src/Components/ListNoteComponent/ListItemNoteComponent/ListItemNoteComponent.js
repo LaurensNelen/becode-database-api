@@ -5,6 +5,7 @@ import axios from 'axios'
 export default function ListItemNoteComponent(props) {
 
     const [showdiv,setshow] = useState(null);
+    const [showButton,SetButton] = useState(null);
     const [showinput,setInput] = useState(null);
     function Delete()
     {
@@ -28,7 +29,7 @@ export default function ListItemNoteComponent(props) {
     function Edit(event)
     {
         event.preventDefault();
-        setshow({ showResults: true });
+        setshow(showResults=>!showResults);
       
     
        
@@ -65,18 +66,37 @@ function update()
 
    const inputStyle={
     display: showdiv ? "flex" :"none",
-}
+    flexDirection:"column",
+    textAlign:'center',
+    margin:'15px auto 15px auto',
+    
 
+}
+const buttonStyle={
+  display: showButton ? "inline" :"none",
+
+
+}
+const listiemstyle = {
+  display:"flex",
+  justifyContent:"center"
+}
+function showbuttons(){
+
+  SetButton( showResults => !showResults );
+}
     return (
-        <div >
-           <p>{props.note} </p>
+        <div style={listiemstyle}>
+        
             <form >
-            <Button variant="primary"
+            <p onClick={showbuttons} >{props.note} </p>
+            <Button style={buttonStyle} variant="primary"
             type='submit' onClick={Delete}>
-     Delete </Button>    <Button variant="primary"
+     Delete </Button>    <Button style={buttonStyle}variant="primary"
             type='submit' onClick={Edit}>
      Edit </Button>
            <div style={inputStyle}>
+             <label>Edit Your title</label>
            <input type='text' name='newtitle' onChange={checkinput}/>
            {/* <input type='submit'onClick={update}></input> */}
            <Button variant="primary" onClick={handleShow}>

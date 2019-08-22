@@ -1,8 +1,9 @@
 import React from 'react';
 import TitleComponent from './Components/TitleComponent/TitleComponent.js';
-import NoteComponent from './Components/NoteComponent/NoteComponent.js';
+import SearchNoteComponent from './Components/SearchNoteComponent/SearchNoteComponent.js';
 import ListNoteComponent from './Components/ListNoteComponent/ListNoteComponent.js';
 import InsertComponent from './Components/InsertComponent/InsertComponent.js';
+import './app.css'
 
 function App() {
   
@@ -11,7 +12,7 @@ function App() {
   
 <TitleComponent/>
 <InsertComponent/>
-<NoteComponent/>
+<SearchNoteComponent/>
 <ListNoteComponent/>
 
     </div>
